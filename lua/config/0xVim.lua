@@ -6,7 +6,7 @@
 local icons = require "utils.icons"
 
 _0xVim_ = {
-  version = "v1.0.0",
+  version = "v1.0.1-beta",
   colorscheme = "catppuccin",
   icons = icons,
   leader = " ",

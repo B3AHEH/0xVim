@@ -1,4 +1,10 @@
+-- ╔══════════════════════════════════════════════════════════════╗
+--   File: config/editing/cmp.lua
+--   This is a configuration file for nvim-cmp
+-- ╚══════════════════════════════════════════════════════════════╝
+
 local cmp = require "cmp"
+local lspkind = require "lspkind"
 
 cmp.setup {
   snippet = {
@@ -7,25 +13,52 @@ cmp.setup {
     end,
   },
   mapping = {
-    ["<S-Tab>"] = cmp.mapping.select_prev_item(),
-    ["<Tab>"] = cmp.mapping.select_next_item(),
+    ["<Tab>"] = function(fallback)
+      if cmp.visible() then
+        cmp.select_next_item()
+      else
+        fallback()
+      end
+    end,
+    ["<S-Tab>"] = function(fallback)
+      if cmp.visible() then
+        cmp.select_prev_item()
+      else
+        fallback()
+      end
+    end,
     ["<C-Space>"] = cmp.mapping.complete(),
     ["<Enter>"] = cmp.mapping.confirm { select = true },
-    ["<C-e>"] = cmp.mapping.close(),
+    ["<Esc>"] = cmp.mapping.close(),
+    ["<C-d>"] = cmp.mapping.scroll_docs(-4),
+    ["<C-f>"] = cmp.mapping.scroll_docs(4),
   },
   sources = {
     { name = "nvim_lsp" },
-    { name = "buffer" },
+    { name = "buffer", keyword_length = 2 },
     { name = "path" },
-    { name = "cmdline" },
     { name = "luasnip" },
   },
-  -- formatting = {
-  --     format = function(entry, vim_item)
-  --         vim_item.kind = string.format('%s %s', require('lspkind').presets.default[vim_item.kind], vim_item.kind)
-  --         return vim_item
-  --     end,
-  -- },
+  completion = {
+    completeopt = "menu,menuone,noselect",
+    keyword_length = 1,
+  },
+  formatting = {
+    format = lspkind.cmp_format {
+      mode = "symbol_text",
+      menu = {
+        nvim_lsp = "[LSP]",
+        ultisnips = "[US]",
+        path = "[Path]",
+        buffer = "[Buffer]",
+        emoji = "[Emoji]",
+      },
+      show_labelDetails = true,
+      maxwidth = 40,
+      ellipsis_char = "...",
+    },
+  },
+  preselect = cmp.PreselectMode.None,
   window = {
     completion = {
       border = "rounded",
