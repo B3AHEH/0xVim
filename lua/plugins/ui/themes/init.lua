@@ -1,3 +1,1 @@
-return {
-    require("plugins.ui.themes.catppuccin"),
-}
+return { require "plugins.ui.themes.catppuccin" }

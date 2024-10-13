@@ -1,16 +1,12 @@
 return {
   -- ╭──────────────────────────────────────────────────────────╮
-  -- │ nvim-treesitter                                          │
-  -- │ code highlighting                                        │
+  -- │ nvim-lspconfig                                           │
+  -- │ official neovim language server protocol client          │
   -- ╰──────────────────────────────────────────────────────────╯
   {
-    "nvim-treesitter/nvim-treesitter",
-    dependencies = {
-      "hiphish/rainbow-delimiters.nvim",
-    },
-    build = ":TSUpdate",
+    "neovim/nvim-lspconfig",
     config = function()
-      require "config.editing.treesitter"
+      require "config.lsp"
     end,
   },
 }

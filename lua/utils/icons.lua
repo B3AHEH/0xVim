@@ -1,3 +1,4 @@
+--TODO: reorganize icons
 local icons = {
   debug = "󰃤",
   markdown = "",

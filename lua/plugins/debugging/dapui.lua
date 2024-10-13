@@ -1,16 +1,14 @@
 return {
   -- ╭──────────────────────────────────────────────────────────╮
-  -- │ nvim-treesitter                                          │
-  -- │ code highlighting                                        │
+  -- │ nvim-dap-ui                                              │
+  -- │ ui for debugging                                         │
   -- ╰──────────────────────────────────────────────────────────╯
   {
-    "nvim-treesitter/nvim-treesitter",
-    dependencies = {
-      "hiphish/rainbow-delimiters.nvim",
-    },
-    build = ":TSUpdate",
+    "rcarriga/nvim-dap-ui",
+    dependencies = { "nvim-neotest/nvim-nio" },
+    requires = { "mfussenegger/nvim-dap" },
     config = function()
-      require "config.editing.treesitter"
+      require "config.debugging.dapui"
     end,
   },
 }

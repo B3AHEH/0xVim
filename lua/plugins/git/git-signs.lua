@@ -1,16 +1,14 @@
 return {
   -- ╭──────────────────────────────────────────────────────────╮
-  -- │ nvim-treesitter                                          │
-  -- │ code highlighting                                        │
+  -- │ gitsigns                                                 │
+  -- │ git integration for buffers                              │
   -- ╰──────────────────────────────────────────────────────────╯
   {
-    "nvim-treesitter/nvim-treesitter",
-    dependencies = {
-      "hiphish/rainbow-delimiters.nvim",
-    },
-    build = ":TSUpdate",
+    "lewis6991/gitsigns.nvim",
+    event = "BufRead",
+    dependencies = { "nvim-lua/plenary.nvim" },
     config = function()
-      require "config.editing.treesitter"
+      require "config.git.git-signs"
     end,
   },
 }

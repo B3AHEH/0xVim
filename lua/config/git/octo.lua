@@ -1,4 +1,7 @@
 -- ╔══════════════════════════════════════════════════════════════╗
---   File: config/editing/autopairs.lua
---   Configuration for autopairs
+--   File: config/git/octo.lua
+--   Configuration for octo
 -- ╚══════════════════════════════════════════════════════════════╝
+
+require("octo").setup {}
+

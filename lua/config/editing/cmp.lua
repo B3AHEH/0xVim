@@ -1,6 +1,6 @@
 -- ╔══════════════════════════════════════════════════════════════╗
 --   File: config/editing/cmp.lua
---   This is a configuration file for nvim-cmp
+--   Configuration for nvim-cmp
 -- ╚══════════════════════════════════════════════════════════════╝
 
 local cmp = require "cmp"
@@ -29,7 +29,7 @@ cmp.setup {
     end,
     ["<C-Space>"] = cmp.mapping.complete(),
     ["<Enter>"] = cmp.mapping.confirm { select = true },
-    ["<Esc>"] = cmp.mapping.close(),
+    ["<C-e>"] = cmp.mapping.close(),
     ["<C-d>"] = cmp.mapping.scroll_docs(-4),
     ["<C-f>"] = cmp.mapping.scroll_docs(4),
   },

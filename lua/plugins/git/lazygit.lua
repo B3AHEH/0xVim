@@ -1,25 +1,18 @@
 return {
   -- ╭──────────────────────────────────────────────────────────╮
-  -- │ noice && nvim-notify                                     │
-  -- │ messages, cmdline and the popupmenu                      │
+  -- │ lazygit                                                  │
+  -- │ simple ui for git commands                               │
   -- ╰──────────────────────────────────────────────────────────╯
   {
-    "folke/noice.nvim",
-    dependencies = {
-      "MunifTanjim/nui.nvim",
-      "rcarriga/nvim-notify",
+    "kdheepak/lazygit.nvim",
+    cmd = {
+      "LazyGit",
+      "LazyGitCurrentFile",
+      "LazyGitFilterCurrentFile",
+      "LazyGitFilter",
     },
-    event = "VeryLazy",
-    enabled = not vim.g.started_by_firenvim,
     config = function()
-      require "config.ui.noice"
+      vim.g.lazygit_floating_window_scaling_factor = 0.95
     end,
-  },
-
-  {
-    "rcarriga/nvim-notify",
-    opts = {
-      timeout = 5000,
-    },
   },
 }

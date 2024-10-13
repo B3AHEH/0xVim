@@ -1,16 +1,13 @@
 return {
   -- ╭──────────────────────────────────────────────────────────╮
-  -- │ nvim-treesitter                                          │
-  -- │ code highlighting                                        │
+  -- │ gitlinker                                                │
+  -- │ tool for generating shareable file permalinks            │
   -- ╰──────────────────────────────────────────────────────────╯
   {
-    "nvim-treesitter/nvim-treesitter",
-    dependencies = {
-      "hiphish/rainbow-delimiters.nvim",
-    },
-    build = ":TSUpdate",
+    "linrongbin16/gitlinker.nvim",
     config = function()
-      require "config.editing.treesitter"
+      require("gitlinker").setup()
     end,
+    cmd = "GitLink",
   },
 }

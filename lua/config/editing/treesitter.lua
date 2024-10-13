@@ -1,6 +1,27 @@
-require("nvim-treesitter").setup {
+-- ╔══════════════════════════════════════════════════════════════╗
+--   File: config/editing/treesitter.lua
+--   Configuration for treesitter
+-- ╚══════════════════════════════════════════════════════════════╝
+
+require("nvim-treesitter.configs").setup {
   auto_install = true,
-  ensure_installed = { "lua", "cpp", "python", "javascript" },
+  ensure_installed = {
+    "lua",
+    "cpp",
+    "python",
+    "javascript",
+    "typescript",
+    "css",
+    "tsx",
+    "vue",
+    "gitcommit",
+    "markdown",
+    "prisma",
+    "json",
+    "json5",
+    "vim",
+    "html",
+  },
   highlight = {
     enable = true,
     additional_vim_regex_highlighting = false,

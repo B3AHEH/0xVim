@@ -1,25 +1,15 @@
 return {
   -- ╭──────────────────────────────────────────────────────────╮
-  -- │ noice && nvim-notify                                     │
-  -- │ messages, cmdline and the popupmenu                      │
+  -- │ nvim-dap                                                 │
+  -- │ debugging                                                │
   -- ╰──────────────────────────────────────────────────────────╯
   {
-    "folke/noice.nvim",
+    "mfussenegger/nvim-dap",
     dependencies = {
-      "MunifTanjim/nui.nvim",
-      "rcarriga/nvim-notify",
+      "rcarriga/nvim-dap-ui",
     },
-    event = "VeryLazy",
-    enabled = not vim.g.started_by_firenvim,
     config = function()
-      require "config.ui.noice"
+      require "config.debugging.dap"
     end,
-  },
-
-  {
-    "rcarriga/nvim-notify",
-    opts = {
-      timeout = 5000,
-    },
   },
 }

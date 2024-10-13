@@ -1,4 +1,7 @@
 -- ╔══════════════════════════════════════════════════════════════╗
---   File: config/editing/autopairs.lua
---   Configuration for autopairs
+--   File: config/git/git-linker.lua
+--   Configuration for gitlinker
 -- ╚══════════════════════════════════════════════════════════════╝
+
+require("gitlinker").setup {}
+

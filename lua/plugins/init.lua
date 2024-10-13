@@ -5,19 +5,15 @@ return {
   -- ╰──────────────────────────────────────────────────────────╯
   {
     "williamboman/mason.nvim",
+    dependencies = {
+      "williamboman/mason-lspconfig.nvim",
+    },
     opts = {},
   },
-  -- ╭──────────────────────────────────────────────────────────╮
-  -- │ nvim-lspconfig                                           │
-  -- │ official neovim language server protocol client          │
-  -- ╰──────────────────────────────────────────────────────────╯
-  {
-    "neovim/nvim-lspconfig",
-    config = function()
-      require "config.lsp"
-    end,
-  },
+  { import = "plugins.lsp" },
   { import = "plugins.editing" },
+  { import = "plugins.debugging" },
   { import = "plugins.ui" },
   { import = "plugins.ui.themes" },
+  { import = "plugins.git" },
 }
