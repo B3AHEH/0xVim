@@ -2,14 +2,6 @@
 --   File: config/options.lua
 --   This file contains all Neovim configuration options settings.
 -- ╚══════════════════════════════════════════════════════════════╝
-vim.api.nvim_set_hl(0, "FloatBorder", { fg = "#a6e3a1", bold = true })
-vim.api.nvim_set_hl(0, "Directory", { fg = "#a6e3a1", bold = true })
-vim.api.nvim_set_hl(0, "NvimTreeFolderIcon", { fg = "#a6e3a1" })
-vim.api.nvim_set_hl(0, "NvimTreeFolderName", { fg = "#cdd6f4" })
-vim.api.nvim_set_hl(0, "NvimTreeOpenedFolderName", { fg = "#a6e3a1", bold = true })
-vim.api.nvim_set_hl(0, "DashboardHeader", { fg = "#a6e3a1", bold = true })
-vim.api.nvim_set_hl(0, "DashboardFooter", { fg = "#585b70", italic = true })
-vim.api.nvim_set_hl(0, "Title", { fg = "#a6e3a1" }) -- Цвет для заголовков
 
 local icons = _0xVim_.icons
 
