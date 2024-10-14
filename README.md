@@ -18,7 +18,7 @@
 
 Dashboard
 
-![Overview](./.screenshots/which-key.jpg)
+![Overview](./.screenshots/overview.jpg)
 
 Overview
 
