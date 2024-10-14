@@ -3,7 +3,7 @@
 --   Configuration for catppuccin
 -- ╚══════════════════════════════════════════════════════════════╝
 
-require("catppuccin").setup({
-    flavor = "mocha", 
-    transparent_background = false, 
-})
+require("catppuccin").setup {
+  flavor = "mocha",
+  transparent_background = false,
+}

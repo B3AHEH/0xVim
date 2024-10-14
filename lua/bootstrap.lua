@@ -22,5 +22,5 @@ require("lazy").setup {
   { import = "plugins" },
 }
 
--- -- seting colorscheme
--- vim.cmd("colorscheme catppuccin")
+-- seting colorscheme
+vim.cmd("colorscheme catppuccin")
