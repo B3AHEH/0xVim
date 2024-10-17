@@ -47,6 +47,7 @@ local highlights = {
 
   BufferLineTabxxx                  = { fg = catppuccin_colors.Overlay_0, bg = catppuccin_colors.Mantle },
   BufferLineTabSelectedxxx          = { fg = catppuccin_colors.Overlay_2, bg = catppuccin_colors.Base },
+  BufferLineSeparator               = { bg = catppuccin_colors.Crust },
 
   NoiceCmdlinePopupBorder           = { link = "Primary" },
   NoiceCmdlineIcon                  = { link = "Primary" },

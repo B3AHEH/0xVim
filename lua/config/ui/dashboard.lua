@@ -60,7 +60,7 @@ require("dashboard").setup {
         key = "w",
         key_hl = "Title",
         key_format = " %s",
-        action = "",
+        action = "Telescope live_grep",
       },
       {
         icon = icons.fire_sp,
@@ -70,7 +70,7 @@ require("dashboard").setup {
         key = "h",
         key_hl = "Title",
         key_format = " %s",
-        action = "",
+        action = "Telescope oldfiles hidden=true",
       },
       {
         icon = icons.light_sp,
@@ -80,7 +80,7 @@ require("dashboard").setup {
         key = "l",
         key_hl = "Title",
         key_format = " %s",
-        action = "",
+        action = "SessionManager load_last_session",
       },
       {
         icon = icons.wrench_sp,

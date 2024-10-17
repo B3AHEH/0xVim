@@ -5,5 +5,5 @@
 
 require("catppuccin").setup {
   flavor = "mocha",
-  transparent_background = false,
+  transparent_background = true,
 }

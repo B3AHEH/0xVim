@@ -59,6 +59,13 @@ for _, lsp in ipairs(servers) do
   }
 end
 
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+lspconfig.html.setup {
+  capabilities = capabilities,
+  on_attach = on_attach, -- ваша функция on_attach, если есть
+}
+
 lspconfig.omnisharp.setup {
   capabilities = capabilities,
   cmd = { "dotnet", vim.fn.stdpath "data" .. "/mason/packages/omnisharp/libexec/OmniSharp.dll" },

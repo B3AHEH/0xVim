@@ -6,10 +6,16 @@ return {
   {
     "echasnovski/mini.animate",
     event = "VeryLazy",
-    opts = function(_, opts)
-      opts.scroll = {
+    opts = {
+      open = {
+        enable = false,
+      },
+      close = {
+        enable = false,
+      },
+      scroll = {
         enable = false,
       }
-    end,
+    },
   },
 }
