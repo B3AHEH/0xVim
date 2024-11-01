@@ -6,8 +6,16 @@
 require("conform").setup {
   formatters_by_ft = {
     lua = { "stylua" },
+    javascript = { "prettier" },
+    typescript = { "prettier" },
+    javascriptreact = { "prettier" },
+    typescriptreact = { "prettier" },
     css = { "prettier" },
     html = { "prettier" },
+    json = { "prettier" },
+    yaml = { "prettier" },
+    markdown = { "prettier" },
+    graphql = { "prettier" },
     cpp = { "clang-format" },
     c = { "clang-format" },
   },

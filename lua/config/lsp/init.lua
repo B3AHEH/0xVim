@@ -44,7 +44,7 @@ end
 
 local lspconfig = require "lspconfig"
 
-local servers = { "html", "cssls", "clangd", "lua_ls" }
+local servers = { "html", "eslint", "vtsls", "cssls", "clangd", "lua_ls" }
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 

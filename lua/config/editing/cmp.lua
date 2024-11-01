@@ -34,6 +34,7 @@ cmp.setup {
     ["<C-f>"] = cmp.mapping.scroll_docs(4),
   },
   sources = {
+    { name = "lspconfig" },
     { name = "nvim_lsp" },
     { name = "buffer", keyword_length = 2 },
     { name = "path" },

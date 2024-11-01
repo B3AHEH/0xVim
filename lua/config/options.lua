@@ -61,6 +61,7 @@ local options = {
     errorbells = false,                   -- Disable error bells
     fileencoding = "utf-8",               -- Encoding for files
     showmode = false,                     -- Don't show -- INSERT --
+    background = "dark",
 }
 
 local diagnosticIcons = { Error = icons.error, Warn = icons.warning, Hint = icons.questionCircle, Info = icons.info }
