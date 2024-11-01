@@ -14,11 +14,11 @@
 
 ## Screenshots
 
-![Dashboard](./.screenshots/dashboard.jpg)
+![Dashboard](./.screenshots/dashboard.png)
 
 Dashboard
 
-![Overview](./.screenshots/overview.jpg)
+![Overview](./.screenshots/overview.png)
 
 Overview
 
